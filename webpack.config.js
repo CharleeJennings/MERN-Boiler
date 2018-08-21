@@ -2,7 +2,7 @@ var path = require ( 'path')
 var webpack = require ('webpack')
 var nodeExternals = require ('webpack-node-externals')
 
-var browserConfig = 
+var browserConfig =
 {
 	entry: './src/client/index.js',
 	output: {
@@ -34,7 +34,7 @@ var browserConfig =
 
 		]
 	},
-	plugins: 
+	plugins:
 	[
 		new webpack.DefinePlugin({
      	 __isBrowser__: "true"
@@ -53,7 +53,9 @@ var serverConfig = {
   },
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' }
+      {test: /\.(js)$/, use: 'babel-loader' },
+			{test:  /\.(gif|png|jpe?g|svg)$/i, use: 'ignore-loader'},
+			{test: /\.css$/, use: 'ignore-loader' },
     ]
   },
   plugins: [

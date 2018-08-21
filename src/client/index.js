@@ -7,13 +7,6 @@ import {BrowserRouter} from 'react-router-dom';
 
 
 
-const client = new ApolloClient({
-
-	uri: 'localhost:3000'
-
-});
-
-
 
 hydrate(
 	<BrowserRouter>
