@@ -5,6 +5,6 @@ cache:
   directories:
     - node_modules
 before_install:
-  -npm i nodemon webpack
+  - npm i nodemon webpack
 script:
   - npm start
